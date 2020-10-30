@@ -1,0 +1,119 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const ProfileSchema = new Schema({
+	user:{
+		type: Schema.Types.ObjectId,
+		ref:'users'
+    },
+	bio:{
+		type:String
+	},
+	status:{
+		type: String
+	},
+	education:[{
+		degree:{
+			type:String,
+			required:true
+		},
+		university:{
+			type:String,
+			required:true
+		},
+		college:{
+			type:String,
+			required:true
+		},
+		completed:{
+			type: Boolean,
+			required:true
+		},
+		marksType:{
+			type:String,
+			default:'CGPA'
+		},
+		marks:{
+			type:Number
+		}
+	}],
+	experience:[{
+		whereAt:{
+			type:String,
+			required:true
+		},
+		duration:{
+			type:String,
+			required:true
+		},
+		designation:{
+			type:String,
+			required:true
+		},
+		description:{
+			type:String
+		},
+		date:{
+			type:Date,
+			default:Date.now,
+			required:true
+		}
+	}],
+	skills:{
+		type:[String],
+		required:true
+	},
+	notes:[{
+		subject:{
+			type:String,
+			required:true
+		},
+		topic:{
+			type:String,
+			required:true
+		},
+		description:{
+			type:String,
+			required:true
+		},
+		driveLink:{
+			type:String
+        },
+        date:{
+			type:Date,
+			required:true,
+			default:Date.now
+		}
+	}],
+	books:[{
+		type: Schema.Types.ObjectId,
+		ref:'users' 
+	}],
+	questionBank:[{
+		type: Schema.Types.ObjectId,
+		ref:'users'
+	}],
+	social:{
+		youtube:{
+			type:String
+		},
+		twitter:{
+			type:String
+		},
+		facebook:{
+			type:String
+		},
+		linkedin:{
+			type:String
+		},
+		instagram:{
+			type:String
+		}
+	},
+	date:{
+		type:Date,
+		default:Date.now
+	}
+});
+
+module.exports = Profile = mongoose.model('profile', ProfileSchema);
