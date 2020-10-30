@@ -31,4 +31,20 @@ router.post('/', ensureAuth, createPost);
 // @route   DELETE /post/:pid
 router.delete('/:pid', ensureAuth, deletePostById);
 
+// @desc    add like to a Post by post id
+// @route   POST /post/like/:pid
+router.post('/like/:pid', ensureAuth, likes);
+
+// @desc    Unlike post by id
+// @route   POST /posts/unlike/:pid
+router.post('/unlike/:pid', ensureAuth, unlike);
+
+// @desc    Add comment to post
+// @route   POST /posts/comment/:pid
+router.post('/comment/:pid', ensureAuth, addComments);
+
+// @desc    Remove comment from post
+// @route   DELETE /posts/comment/:pid/:comment_id
+router.delete('/comment/:pid/:comment_id', ensureAuth, deleteComment);
+
 module.exports = router;
