@@ -29,19 +29,19 @@ router.get('/topic/:qtopic', ensureAuth, getAllQuestionBanksByTopic);
 // @route   GET /qb/id/:qid
 router.get('/id/:qid', ensureAuth, getAllQuestionBankById);
 
-const Questionbank = require('../../models/QuestionBank'); 
-// test
-router.post('/', (req, res) =>{
-    const newQB = new Questionbank({
-        subject: req.body.subject,
-        topic: req.body.topic,
-        source: req.body.source,
-        college: req.body.college,
-        questions: req.body.questions
-    });
-    newQB.save().then(() => res.json({success: true}))
-    .catch(err => res.json({success:false, err}))
-});
+// const Questionbank = require('../../models/QuestionBank'); 
+// // test
+// router.post('/', (req, res) =>{
+//     const newQB = new Questionbank({
+//         subject: req.body.subject,
+//         topic: req.body.topic,
+//         source: req.body.source,
+//         college: req.body.college,
+//         questions: req.body.questions
+//     });
+//     newQB.save().then(() => res.json({success: true}))
+//     .catch(err => res.json({success:false, err}))
+// });
 
 module.exports = router;
 
