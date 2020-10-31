@@ -41,7 +41,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 // Routes
-app.use('/', require('./routes/api/dashboard'));
+app.use('/', require('./routes/api/startPage'));
 app.use('/auth', require('./routes/api/auth'));
 app.use('/flashcard', require('./routes/api/flashcard'));
 app.use('/profile', require('./routes/api/profile'));
