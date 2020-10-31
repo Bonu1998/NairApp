@@ -7,12 +7,6 @@ const { ensureAuth, ensureGuest } = require('../../middlewares/auth')
 // @route   GET /
 router.get('/', ensureGuest, (req, res) => {
 	res.status(200).json({sucess:true, message:'Landing Page'})
-})
-
-// @desc    Dashboard
-// @route   GET /dashboard
-router.get('/dashboard', ensureAuth, async (req, res) => {
-	res.status(200).json({sucess:true, message:"on dashboard"});
 });
 
 module.exports = router;
