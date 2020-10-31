@@ -8,7 +8,6 @@ const getAllNotesById = require('../../controllers/notes/getAllNotesById');
 const addNotes = require('../../controllers/notes/addNotes');
 const updateNotes = require('../../controllers/notes/updateNotes');
 const deleteNotes = require('../../controllers/notes/deleteNotes');
-const { delete } = require('./startPage');
 
 // @desc    View all notes
 // @route   GET /notes/
