@@ -44,6 +44,8 @@ app.use(passport.session())
 app.use('/', require('./routes/api/dashboard'));
 app.use('/auth', require('./routes/api/auth'));
 app.use('/flashcard', require('./routes/api/flashcard'));
+app.use('/profile', require('./routes/api/profile'));
+app.use('/posts', require('./routes/api/posts'));
 
 const port = process.env.PORT || 4000;
 
