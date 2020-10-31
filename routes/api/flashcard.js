@@ -3,11 +3,11 @@ const router = express.Router()
 const { ensureAuth, ensureGuest } = require('../../middlewares/auth');
 
 // Controllers
-const getAllFlashcards = require('../../controllers/flashcards/getAllFlashcards');
-const getFlashcardById = require('../../controllers/flashcards/getFlashcardById');
-const createFlashcard = require('../../controllers/flashcards/createFlashcard');
-const updateFlashcardById = require('../../controllers/flashcards/updateFlashcardById');
-const deleteFlashcardById = require('../../controllers/flashcards/deleteFlashcardById');
+const getAllFlashcards = require('../../controllers/flashcard/getAllFlashcards');
+const getFlashcardById = require('../../controllers/flashcard/getFlashcardById');
+const createFlashcard = require('../../controllers/flashcard/createFlashcard');
+const updateFlashcardById = require('../../controllers/flashcard/updateFlashcardById');
+const deleteFlashcardById = require('../../controllers/flashcard/deleteFlashcardById');
 
 // @desc    View all Flash cards
 // @route   GET /flashcard/
