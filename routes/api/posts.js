@@ -14,6 +14,10 @@ const getAllPosts = require('../../controllers/posts/getAllPosts');
 const getAllPostsOfCurrentUser = require('../../controllers/posts/getAllPostsOfCurrentUser');
 const createPost = require('../../controllers/posts/createPost');
 const deletePostById = require('../../controllers/posts/deletePostById');
+const likes = require('../../controllers/posts/likes');
+const unlike = require('../../controllers/posts/unlike');
+const addComments = require('../../controllers/posts/addComments');
+const deleteComment = require('../../controllers/posts/deleteComments');
 
 // @desc    View all post cards
 // @route   GET /post/
