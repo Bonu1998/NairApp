@@ -9,7 +9,7 @@ module.exports = (req, res) =>{
 	const {errors, isValid} = validateFlashcardInput(req.body);
 
 	if(!isValid){
-		res.status(400).json(errors);
+		res.status(200).json({success: true, message:'Enter Proper Details'});
 	}else {
 		User.findById(req.user.id)
 			.then(user => {
