@@ -49,6 +49,7 @@ app.use('/posts', require('./routes/api/posts'));
 app.use('/notes', require('./routes/api/notes'));
 app.use('/books', require('./routes/api/books'));
 app.use('/qb', require('./routes/api/questionBank'));
+app.use('/papers', require('./routes/api/paper'));
 
 const port = process.env.PORT || 4000;
 
