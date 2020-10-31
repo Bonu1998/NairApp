@@ -40,20 +40,20 @@ router.get('/university/:puniversity', ensureAuth, getPaperByUniversity);
 router.get('/year/:pyear', ensureAuth, getPaperByYear);
 
 
-const Paper = require('../../models/Paper'); 
-// test
-router.post('/', (req, res) =>{
-    const newPaper = new Paper({
-        course: req.body.course,
-        subject: req.body.subject,
-        university: req.body.university,
-        year: req.body.year,
-        paperYear: req.body.paperYear,
-        link: req.body.link
-    });
-    newPaper.save().then(() => res.json({success: true}))
-    .catch(err => res.json({success:false, err}))
-});
+// const Paper = require('../../models/Paper'); 
+// // test
+// router.post('/', (req, res) =>{
+//     const newPaper = new Paper({
+//         course: req.body.course,
+//         subject: req.body.subject,
+//         university: req.body.university,
+//         year: req.body.year,
+//         paperYear: req.body.paperYear,
+//         link: req.body.link
+//     });
+//     newPaper.save().then(() => res.json({success: true}))
+//     .catch(err => res.json({success:false, err}))
+// });
 
 
 
